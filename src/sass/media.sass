@@ -1,0 +1,490 @@
+$text: #280607
+$accent: #0b6570
+$middle: #81c0b5
+$green: #006400
+$grey: #b4d2ba
+$light: #f7ebc3
+$error: #fd5514
+
+
+$xl: "only screen and (min-width: 1140px)"
+$md: "only screen and (min-width: 960px)"
+$sm: "only screen and (min-width: 720px)"
+$xs: "only screen and (min-width: 540px)"
+
+h1, h2, h3, h4, h5, h6
+  margin: 0
+  padding: 0
+  font-weight: 700
+  color: $text
+
+ul, li
+  margin: 0
+  padding: 0
+  list-style-type: none
+
+a
+  color: $text
+  display: block
+  text-decoration: none
+  transition: all 0.3s ease
+
+a:hover
+  text-decoration: none
+
+a[href^="tel"]
+  color: #fff
+
+img
+  max-width: 100%
+  height: auto
+  display: inline-block
+
+*:focus, *:hover, *.active, *:active, *:visited, button, input, select
+  outline: 0 !important
+  text-decoration: none
+
+button, a, .jq-selectbox
+  cursor: pointer
+
+section
+  position: relative
+
+.flex-cont
+  display: flex
+  flex-wrap: nowrap
+
+.body
+  font-family: 'Montserrat', sans-serif
+  color: $text
+
+.wrapper
+  max-width: 1200px
+  margin: auto
+  padding: 20px
+
+.header
+  .wrapper
+    justify-content: space-between
+    display: flex
+    align-items: center
+
+.section__title
+  font-size: 40px
+  text-align: center
+  font-weight: 900
+  margin: 40px 0
+  filter: drop-shadow(0px 6px 2px rgba(0,0,0,0.7)) drop-shadow(0px 20px 7px rgba(0,0,0,0.4))
+
+.nice-select
+  height: 42px
+  line-height: 42px
+
+.auth .btn
+  margin: 0 5px
+
+.logo
+  flex-basis: 160px
+  width: 160px
+
+.auth
+  display: flex
+
+.logo__linc
+  display: block
+  transition: margin-top 0.3s ease-in-out, filter0.3s ease-in-out
+
+  &:hover
+    opacity: 0.7
+
+.header__select
+  min-width: 240px
+  margin: 0 5px
+
+.nice-select
+  border: 1px solid $accent
+
+.nice-select .list
+  background: $middle
+
+.nice-select .option:hover, .nice-select .option.focus, .nice-select .option.selected.focus
+  background: $light
+
+nav
+  background: $accent
+
+nav .wrapper
+  padding: 0 20px
+
+.main-nav
+  display: flex
+  justify-content: stretch
+
+.main-nav__link
+  color: $light
+  text-transform: uppercase
+  padding: 20px
+  display: block
+  text-align: center
+  font-weight: 700
+  font-size: 16px
+  transition: all 0.3s ease
+  position: relative
+
+  &:hover
+    color: $text
+    background: $middle
+
+  &:before
+    content: ''
+    width: 0
+    height: 6px
+    background: $text
+    position: absolute
+    bottom: 0
+    left: 50%
+    opacity: 0.5
+    transform: translateX(-50%)
+
+.main-nav__item
+  flex-basis: 25%
+
+.main-nav__link--active
+  color: $text
+  background: $middle
+
+  &:before
+    width: 100%
+    transform: translateX(-50%)
+
+.forms__wrapper
+  display: flex
+  justify-content: space-between
+
+.form__block
+  padding: 2px 4px
+  position: relative
+  margin: 5px
+  width: 20%
+  flex-basis: 19%
+  display: flex
+  flex-wrap: wrap
+  justify-content: space-between
+  align-items: center
+  border: 1px  solid $middle
+
+  &.form__block--error
+    border: 2px  solid $error
+    -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75)
+    -moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75)
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75)
+
+.forms__wrapper--bottom
+  justify-content: flex-end
+
+.form-title
+  font-size: 100px
+  color: $middle
+  opacity: 0.3
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+  z-index: -1
+
+.section__subtitle
+  font-weight: 300
+  text-align: center
+  margin-top: 20px
+  margin-bottom: 20px
+  position: relative
+
+  &::before
+    content: ''
+    width: 100%
+    position: absolute
+    top: -10px
+    height: 1px
+    left: 0
+    right: 0
+    z-index: 0
+    background: -webkit-linear-gradient(left, rgba(255,255,255,0) 0%, #000 49%, rgba(252,248,248,0) 100%)
+    background: -o-linear-gradient(left, rgba(255,255,255,0) 0%, #000 49%, rgba(252,248,248,0) 100%)
+    background: -ms-linear-gradient(left, rgba(255,255,255,0) 0%, #000 49%, rgba(252,248,248,0) 100%)
+    background: linear-gradient(to right, rgba(255,255,255,0) 0%,#000 49%, rgba(252,248,248,0) 100%)
+
+.form__item
+  border: 1px  solid $grey
+  -webkit-border-radius: 4px
+  -moz-border-radius: 4px
+  border-radius: 4px
+  display: flex
+  align-items: center
+  justify-content: center
+  height: 40px
+  width: 40px
+  flex-basis: 22%
+  margin: 2px 0
+  position: relative
+
+  &.form__item--highlight
+    border: 1px  solid $green
+    background: rgba(0,100,0,0.4)
+    box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.75)
+
+    .form__text
+      color: $green
+
+  input
+    position: absolute
+    opacity: 0
+
+    &:checked + label
+      background-image: url(../images/icon-del.svg)
+
+  label
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    background-repeat: no-repeat
+    background-position: center
+    -webkit-background-size: 75%
+    background-size: 75%
+
+.form__text
+  color: $grey
+  font-size: 16px
+  font-weight: 700
+
+.form__button
+  margin: 40px 0 60px
+  border: 1px  solid $grey
+  border-radius: 4px
+  width: 50%
+  height: 40px
+  text-transform: uppercase
+  color: $text
+  font-weight: 700
+  transition: all 0.2s ease
+  opacity: 1
+  position: static
+
+  &:disabled
+    opacity: 0.4
+
+  &:hover
+    color: $light
+    background: $accent
+
+    &:disabled
+      color: $text
+      background: $grey
+
+  &.form__button--again
+    border: 1px  solid $green
+    background: rgba(0,100,0,0.4)
+    opacity: 0
+    width: 0
+    height: 0
+    overflow: hidden
+
+    &:hover
+      background: $green
+      color: $light
+
+.btn
+  background: buttonface
+  color: $text
+  border: 1px solid $grey
+  transition: all 0.3s ease
+  height: 40px
+  border-radius: 4px
+  padding: 0 40px
+  line-height: 40px
+  font-weight: 700
+  text-transform: uppercase
+
+  &:hover
+    background: $accent
+    color: $light
+
+.slider__button
+  position: absolute
+  top: 40px
+  right: 40px
+  z-index: 1
+
+.slider__description
+  padding: 20px 40px
+  text-align: center
+  font-weight: 300
+
+.slider__item
+  position: relative
+  margin: 20px
+
+.slider__img
+  width: 100%
+  height: 300px
+  overflow: hidden
+
+  img
+    height: 300px
+    width: 100%
+    object-fit: cover
+
+.slick-arrow
+  position: absolute
+  top: 50%
+  z-index: 1
+  margin-top: -50px
+  width: 100px
+  height: 100px
+  background: transparent
+  -webkit-background-size: contain
+  background-size: contain
+  background-repeat: no-repeat
+  border: none
+  font-size: 0
+  color: transparent
+
+  &.slick-next
+    left: 20px
+    background-image: url(../images/icon-left.png)
+
+  &.slick-prev
+    right: 20px
+    background-image: url(../images/icon-right.png)
+
+.form--submit
+  .form__button
+    opacity: 0
+    width: 0
+    height: 0
+    overflow: hidden
+
+    &.form__button--again
+      opacity: 1
+      position: static
+      width: 50%
+      height: 40px
+
+.form__error
+  opacity: 0
+  color: $error
+  margin: 40px 0 60px
+  flex-basis: 50%
+  padding-right: 150px
+
+  &.form__error--active
+    opacity: 1
+
+.footer
+  background: $accent
+
+.network
+  justify-content: center
+
+.network__item
+  margin: 10px
+  transition: all 0.3s ease-in-out
+
+.footer__menu
+  padding: 40px 0
+  column-count: 3
+  column-gap: 30px
+  column-rule: 1px dotted $light
+
+.footer__item
+  padding: 10px
+
+.modal
+  position: fixed
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  background: rgba(11,101,112,0.8)
+  display: none
+  align-items: center
+  justify-content: center
+
+.modal
+  &.active
+    display: flex
+
+.modal__wrapper
+  min-width: 600px
+  margin: 20px
+  background: $light
+  position: relative
+
+.modal__content
+  padding: 40px
+  padding-top: 80px
+  text-align: center
+
+.modal__numbers
+  margin-top: 20px
+  margin-bottom: 20px
+
+.modal__winn-num
+  line-height: 40px
+  text-align: left
+  width: 60%
+  margin: auto
+
+.modal__title, .modal__text
+  font-size: 30px
+  font-weight: 900
+
+.modal__close
+  position: absolute
+  right: 10px
+  width: 70px
+  top: 10px
+
+.footer__link
+  display: inline
+  position: relative
+  color: $light
+  overflow: hidden
+  width: auto
+  line-height: 1.4
+
+  &::after
+    content: ''
+    display: block
+    position: absolute
+    bottom: -5px
+    left: 0
+    right: 0
+    margin-right: 100%
+    height: 1px
+    border-bottom: 1px dotted $light
+    transition: all 0.3s ease-in-out
+
+
+  &:hover
+    &::after
+      margin-right: 0
+
+.cloud__icon
+  margin-top: 0
+  transition: all 0.3s ease-in-out
+
+  &:hover
+    margin-top: 15px
+
+  .cloud__img
+    filter: drop-shadow(0px 6px 2px rgba(0,0,0,0.7)) drop-shadow(0px 20px 7px rgba(0,0,0,0.4))
+    transition: all 0.3s ease-in-out
+
+  &:hover
+    margin-top: 0
+
+    .cloud__img
+      transform: translateY(10px)
+      filter: drop-shadow(0px 6px 2px rgba(0,0,0,0.7)) drop-shadow(0px 10px 7px rgba(0,0,0,0.4))
